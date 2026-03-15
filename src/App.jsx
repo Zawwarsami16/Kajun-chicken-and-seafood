@@ -67,7 +67,7 @@ function Layout() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/kajun-chicken" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter basename="/Kajun-chicken-and-seafood" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AdminProvider>
         <CartProvider>
           <ToastProvider>
