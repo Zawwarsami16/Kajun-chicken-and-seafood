@@ -157,3 +157,12 @@
 /* Hide old text-based logo styles if present */
 .nav__logo-badge { display: none !important; }
 .nav__logo-text  { display: none !important; }
+
+.nav__admin-link {
+  font-size: 16px;
+  color: var(--k-muted);
+  opacity: .3;
+  transition: opacity .2s;
+  padding: 4px 8px;
+}
+.nav__admin-link:hover { opacity: 1; color: var(--k-red); }

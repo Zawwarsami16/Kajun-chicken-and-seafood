@@ -17,6 +17,8 @@ const LINKS = [
   { to: '/games', label: '🎮 Arcade' },
 ];
 
+const ADMIN_URL = '/Kajun-chicken-and-seafood/admin';
+
 export default function Navbar({ onCart }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
