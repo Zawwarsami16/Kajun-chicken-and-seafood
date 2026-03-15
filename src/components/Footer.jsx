@@ -52,7 +52,7 @@ export default function Footer() {
               {[['/', 'Home'],['/menu','Menu'],['/about','Our Story'],['/locations','Locations'],['/games','🎮 Arcade']].map(([to,l]) => (
                 <li key={to}><Link to={to} className="footer__link">{l}</Link></li>
               ))}
-              <li><Link to="/admin" className="footer__link footer__link--admin">⚙ Staff Panel</Link></li>
+              <li><a href="/Kajun-chicken-and-seafood/admin" className="footer__link footer__link--admin">⚙ Staff Panel</a></li>
             </ul>
           </div>
 
