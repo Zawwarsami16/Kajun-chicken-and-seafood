@@ -108,6 +108,8 @@ export default function Footer() {
             </span>
             <span className="t-muted" style={{fontSize:11}}>{rights}</span>
           </div>
+          {/* Staff admin access */}
+          <a href="/Kajun-chicken-and-seafood/admin" className="footer__admin-link" title="Staff Access">⚙</a>
         </div>
       </div>
     </footer>

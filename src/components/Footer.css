@@ -71,3 +71,9 @@
   .footer__zai-credit { align-items:flex-start;text-align:left; }
   .footer__bottom-inner { flex-direction:column;gap:10px; }
 }
+
+.footer__admin-link {
+  font-size:14px;opacity:.18;transition:opacity .3s;
+  color:var(--k-muted);padding:4px 8px;
+}
+.footer__admin-link:hover { opacity:.7; }
