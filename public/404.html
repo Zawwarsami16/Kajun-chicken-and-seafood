@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <title>Kajun Chicken</title>
   <script>
-    var path = window.location.pathname;
-    var base = '/Kajun-chicken-and-seafood';
-    var route = path.replace(base, '') || '/';
-    sessionStorage.setItem('redirect', route);
-    window.location.replace(base + '/');
+    var seg = window.location.pathname.replace('/Kajun-chicken-and-seafood','') || '/';
+    sessionStorage.setItem('spa_redirect', seg);
+    window.location.replace('/Kajun-chicken-and-seafood/');
   </script>
 </head>
 <body></body>

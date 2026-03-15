@@ -18,6 +18,15 @@
       #root { opacity: 0; transition: opacity 0.4s ease; }
       #root.ready { opacity: 1; }
     </style>
+  <script>
+    (function() {
+      var redirect = sessionStorage.getItem('spa_redirect');
+      if (redirect && redirect !== '/') {
+        sessionStorage.removeItem('spa_redirect');
+        window.history.replaceState(null, null, '/Kajun-chicken-and-seafood' + redirect);
+      }
+    })();
+  </script>
   </head>
   <body>
     <div id="root"></div>

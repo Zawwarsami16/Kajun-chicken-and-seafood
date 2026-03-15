@@ -74,10 +74,15 @@ function ParticleCanvas() {
 /* ── CountUp ─────────────────────────────────────────────── */
 function CountUp({ to, suffix='', duration=1800 }) {
   const [v, setV] = useState(0);
+  const [started, setStarted] = useState(false);
   const ref = useRef(null);
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
     const obs = new IntersectionObserver(([e]) => {
-      if(!e.isIntersecting) return; obs.disconnect();
+      if(!e.isIntersecting || started) return;
+      setStarted(true);
+      obs.disconnect();
       const start = performance.now();
       const step = ts => {
         const p = Math.min((ts-start)/duration,1);
@@ -85,8 +90,8 @@ function CountUp({ to, suffix='', duration=1800 }) {
         if(p<1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
-    }, {threshold:.5});
-    if(ref.current) obs.observe(ref.current);
+    }, {threshold:.1, rootMargin:'0px 0px -10px 0px'});
+    obs.observe(el);
     return () => obs.disconnect();
   }, [to, duration]);
   return <span ref={ref}>{v}{suffix}</span>;
